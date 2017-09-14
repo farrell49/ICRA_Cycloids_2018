@@ -1,0 +1,88 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{1956}
+L.~K. D.W.~Botsiber, ``Design and performance of the cycloid speed reducer,''
+  in \emph{Machine Design 28}, 1956, pp. 65--69.
+
+\bibitem{on_the_lobe}
+J.-H. Shin and S.-M. Kwon, ``On the lobe profile design in a cycloid reducer
+  using instant velocity center,'' vol.~41, pp. 596--616, 2005.
+
+\bibitem{hwang_hsieh}
+Y.-W. Hwang and C.-F. Hsieh, ``Geometric design using hypotrochoid and
+  nonundercutting conditions for an internal cycloidal gear,'' vol. 129, no.~4,
+  pp. 413--420.
+
+\bibitem{design_and_application}
+D.~C.~H. Yang and J.~G. Blanche, ``Design and application guidelines for
+  cycloid drives with machining tolerances,'' vol.~25, pp. 489--501, 1990.
+
+\bibitem{li}
+S.~Li, ``Design and strength analysis methods of the trochoidal gear
+  reducers,'' vol.~81, pp. 140--154.
+
+\bibitem{hsieh_traditional}
+C.-F. Hsieh, ``Traditional versus improved designs for cycloidal speed reducers
+  with a small tooth difference: The effect on dynamics,'' vol.~86, pp. 15--35.
+
+\bibitem{hsieh_dynamics}
+Hsieh and Chiu-Fan, ``Dynamics analysis of cycloidal speed reducers with
+  pinwheel and nonpinwheel designs,'' vol. 136, no.~9, pp.
+  091\,008--091\,008--11.
+
+\bibitem{Malhorta}
+D.~C.~H. Yang and J.~G. Blanche, ``Analysis of a cycloid speed reducer,''
+  vol.~18, pp. 491--499, 1983.
+
+\bibitem{unified_approach}
+J.~W. Sensinger, ``Unified approach to cycloid drive profile, stress, and
+  efficiency optimization,'' vol. 132, no.~2, pp. 024\,503--024\,503--5.
+
+\bibitem{cycloid_vs_harmonic}
+J.~W. Sensinger and J.~H. Lipsey, ``Cycloid vs. harmonic drives for use in high
+  ratio, single stage robotic transmissions,'' in \emph{2012 {IEEE}
+  International Conference on Robotics and Automation}, pp. 4130--4135.
+
+\bibitem{rover}
+B.~Bluethmann, E.~Herrera, A.~Hulse, J.~Figuered, L.~Junkin, M.~Markee, and
+  R.~O. Ambrose, ``An active suspension system for lunar crew mobility,'' in
+  \emph{2010 IEEE Aerospace Conference}, March 2010, pp. 1--9.
+
+\bibitem{machine_design}
+J.~E. Shigley, C.~Mischkea, and R.~G. Budynas, \emph{Mechanical Engineering
+  Design}, 7th~ed.\hskip 1em plus 0.5em minus 0.4em\relax New York:
+  McGraw-Hill, 2004.
+
+\bibitem{ye}
+Z.~Ye, W.~Zhang, Q.~Huang, and C.~Chen, ``Simple explicit formulae for
+  calculating limit dimensions to avoid undercutting in the rotor of a cycloid
+  rotor pump,'' vol.~41, no.~4, pp. 405--414.
+
+\bibitem{electric_machines}
+P.~Krause, O.~Wasynczuk, S.~Sudhoff, and S.~Pekarek, \emph{Analysis of Electric
+  Machinery and Drive Systems}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax
+  Wiley-IEEE Press, 2013.
+
+\bibitem{harmonic_sheet}
+\emph{Speed Reducers for Precision Motion Control: Harmonic Drive Reducers},
+  Harmonic Drive, June 2017, rev 20170615.
+
+\end{thebibliography}

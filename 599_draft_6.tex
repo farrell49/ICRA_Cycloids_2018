@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cite}
+\usepackage{multicol}
+
+
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf
+Simply Grasping Simple Shapes:\\
+Shape Based Synergy Commanding of a Humanoid Hand
+}
+
+\author{Logan C Farrell$^{1}$, Troy Dennis$^{2}$, Julia Badger$^{3}$, and Marcia O'Malley$^{4}$ % <-this % stops a space
+\thanks{$^{1}$Logan Farrell is with the Department of Mechanical Engineering, Rice University, and NASA: Johnson Space Center, Houston, TX
+        {\tt\small logan.c.farrell@nasa.gov}}%
+\thanks{$^{2}$Troy Dennis is with the Department of Mechanical Engineering, Rice University, Houston, TX
+        {\tt\small troy.a.dennis@rice.edu}}%
+\thanks{$^{3}$Julia Badger is the Robonaut 2 Project Manger at NASA: Johnson SPace Center, Houston, TX}
+\thanks{$^{4}$Marcia O'Malley is on the Faculty in the Department of Mechanical Engineering, Rice University, Houston, TX}
+}
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+While dextrous humanoid robots have become more common, their usefulness in an uncontrolled laboratory setting is limited due to the complexity in programming the robots to grasp common objects. There exists a need for an efficient method to command high degree of freedom dexterous manipulators for a range of objects such that explicit models are not needed for every interaction. The authors propose a method incorporating the concept of synergies to decrease the commanded degrees of freedom to match intuitive measurements of an object, like the diameter of a cylinder. Using the SynGrasp toolbox, a model of Robonaut 2's 20 DoF hand was created in order to perform contact analysis around a small range of cylinders. Using these relationships, tests were performed on the robot to validate and update the models. This relationship built around diameter was tested on the robot, resulting in successful manipulation of a large range of cylindrical objects the robot had never previously interacted with. This method can be applied to any humanoid hand to decrease the number of commanded degrees of freedom based on simple, measureable inputs in order to grasp commonly shaped objects, vastly multiplying the library of manipulatable objects for the robot. 
+
+\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+
+Humanoid robots provide the capability to operate a robot in the same space, using the same tools that a human can. The vision of the future of these robots can clearly be seen with efforts for robots to go into disaster areas unsafe for humans \cite{fukushima_robots} or help humans do menial tasks. Perhaps the single largest capability necessary to accomplish these human tasks is the ability to manipulate the same objects that humans can. For this challenge, many designers have created hands capable of nearly all of the degrees of freedom (DoF) as the human hand \cite{r2_hand}, \cite{DRL}, \cite{hrp3}, \cite{softhand}. However, while the hands are capable of forming many of the same grips and poses as a human hand, the control of these hands in an intuitive, and simple way has yet to be implemented. Until the community can quickly and effectively control these high DoF humanoid hands, robots will still need to be highly specialized for individual tasks. \par
+Research shows that humans control their hands not with individual joint signals, as dextrous robot hands are typically controlled, but instead by a single signal that actuates multiple muscle groups. These groups combine to create the plethora of hand motions humans can form \cite{Santello} \cite{neuro}. This approach gives a method for decreasing the commanded DoF of the hand system to a more managable number, and is referred to as "synergies." However, these synergies still mimic the motions of the human hand, which are difficult to intuitively combine into useful hand motions, shifting the complexity problem from degrees of freedom, to nonintuitive combinations of synergies. \par
+In this paper, the authors propose a method to create a single DoF synergy for Robonaut 2's hand with 20 DoF based on a basic geomertial features of simple shapes. The authors build this relationship around simple parameters, like a cylinders diameter, to command the robot. This allows the robot to successfully manipulate any cylindrical object found in an every day environment with only a single model.  
+
+\section{BACKGROUND}
+
+\subsection{Hand Synergies}
+	Dexterous manipulation in robots has developed from a simple parallel gripper towards the complexity of motion of the human hand in the past decades. This high DoF system similar to the human hand allows robots to manipulate objects in similar ways to a human, allowing intuitive control of the hand. However, as this problem has been studied further, construction of robotic hands with similar DoFs as the human hand has become common place, the control is anything but intuitive. The computational costs to calculate the correct closing position around a given object as perceived by a robotic vision system is 
+
+$$
+f(x) = O(2^N)  \eqno{(1)}
+$$
+where N reoresents the number of DoFs because each DoF needs to be controlled individually. This has led to many studies regarding the way that humans control our own hands with hopes of extending that same control scheme to a robotic hand \cite{missing}. 
+
+The seminal work by Marco Santello \cite{Santello} has demonstrated that the human brain does not have a specific section that moves the distal ring finger joint, and another for the proximal joint, etc. Instead, our brain will send high level commands down through the motor cortex to do sets of actions, and these will travel down the spine and activate sets of muscles in combination, rather than just single muscle groups. In this way, our brain is grouping and combining sets of commands in different ways to accomplish the task \cite{neuro}.  Santello’s research performed Principal Component Analysis (PCA) on a large range of every day grasps, and was able to model 50$\%$ of all grasps with a single relationship or synergy. If a second synergy is added in proportion, roughly 80$\%$  of all grasps can be commanded, the third synergy results in over 90$\%$  of observed grasps. This coupling demonstrates how our brain is potentially reducing the 20 DoF problem of hand motion into only a few DoFs. Thinking in this way greatly reduces the complexity of grasping for humans and allows them to smoothly control a very large number of DoFs to accomplishgrasping  tasks without a large burden on the nervous system. 
+
+ Engineers can draw inspiration from this structure to design robotic grasping devices.  A synergistic scheme can be implemented in several ways.  Human hand synergies can be used to identify key DoFs that are necessary for a simplified hand design.  They can also be used to devise underactuation schemes such as the PISA-IIT softhand \cite{softhand}.  Finally, they can be used to simplify the control of fully actuated hands by creating "Software Synergies" \cite{catalano_2012_adaptive}.  This type of scheme was demonstrated by Ciorcarlie et. al. in 2007 \cite{ciocarlie_2007_dexterous}.  The group used the GraspIt software simulation to map the two primary human postural synergies to fully actuated robotic hands.  We aim to further this work by using the SynGrasp software because it is well suited to designing synergy schemes and testing them using kinematics \cite{salvietti_2016_map}.  We also aim to create our own unique purpose-driven synergy scheme instead of mapping human synergies.
+
+	SynGrasp is a MATLAB toolbox developed at the University of Siena \cite{syngrasp} for the purpose of simulating “Underactuated Robot Grasping”.  This toolbox provides three helpful capabilities: it allows the user to model robotic hands, perform grasp simulations and analysis, and map synergies on to robot hand designs.   The ability to create user defined hand models and synergies makes this an ideal tool to use to simulating a synergy based command structure for R2.  A computational tool for modeling grasps and commands for R2 would be hugely beneficial for evaluation of the hand and for designing grips for it.  While the main purpose of this study is to evaluate a synergy command architecture for R2, it will have the added objective of evaluating the use and accuracy of Syngrasp simulations in real-world environments.
+
+\subsection{Test Platform and Motivation}
+NASA is actively researching humanoid robotics to work in the same environment as astronauts. To this end, Robonaut 2 is a humanoid robot with two 7 DoF arms (including the wrist), a 3 DoF neck, 1 DoF waist, two 12 Dof hands, and two 7 DoF legs that is currently onboard the International Space Station. The design goal of this robot is to help astronauts with repetitive tasks on the International Space Station like monitoring airflow, cleaning handrails, unpacking resupply vehicles etc. \cite{r2_diftler}. Currently, NASA is actively developing technologies to allow this robot to behave with more autonomy. This is necessary to allow supervised control over long time delays as missions progress further and farther from Earth \cite{Farrell}. 
+
+To achieve this level of autonomy and dexterity, setting specific values for every joint to form every possible hand pose depending on each unique model creates an intractible design and test issue. Each object to be manipulated must be modeled, the approach trajectories made and tested, and the necessary hand positions made and verified. However, if the commands to control grasps can be decreased from 20 DoF to 1 DoF, this task becomes significantly simpler. Instead of each individual object, a single cylindrical model could be made and verified. Then, the robot will have a model to manipulate any cylindrical object encountered. The application of synergies in this case will save time and effort while increasing the capability and usefulness of the dexterous robot.   
+
+This paper presents shows a methodology to decrease the commanded degrees of freedom from 12 to 1 for the Robonaut 2 hand to manipulate simple cylindrical shapes. This methodology would replace all unique cylindrical type models with a single model to allow simple manipulation of common objects. In addition, this research will have the added objective of evaluating the use and accuracy of Syngrasp simulation in a real-world environment. In Section \ref{methods} , the authors present the current method for manipulation on the R2 platform, then move to the creation of the new synergy model using SynGrasp, and how that model was implemented and tested on the robot. The results demonstrating this methodology are presented in Section \ref{results}, followed by a discussion. 
+
+
+\subsection{Current R2 Grasping Process}
+
+In practice, many humanoid systems will use some model based approach to manipulating objects encountered in the world. This can be seen through the DRC trails in the ways in which the teams commanded their humanoids to interact with things like drills, door handles, valves, etc. \cite{DRC_Yanco}, \cite{IHMC}. Currently, the R2 project is using the Affordance Templates (AT) framework, initially presented in \cite{affordance_templates}. This system allows a model of an object to be created with different end effector waypoints to create allowable affordances for manipulating the object. Through this AT model, a catalogue of different objects with their affordances is created and stored to be used throughout the manipulation process. However, currently each new object encountered must have a new Affordance Template created before it can be manipulated. If generic models were available, any new object encountered that fit closely enough to an existing model could be used immediately, with no further development time. 
+
+To create an Affordance Template, the user must first load in the mesh of the object to visualize in the simulated environment as well as give a collision model for motion plananing. Next, the user must create different waypoints to dictate the necessary endeffector positions with respect to the object to give the affordance for a manipulation task. There can be multiple affordances per object, for example, a drill could be picked up via the handle or the top, making each approach it's own affordance in the template. As part of each waypoint, the endeffector hand pose is dictated. R2 was constructed using the Cutkosky Grasps \cite{Cutkosky} and these hand positions form the cataloge of available hand poses. If a hand pose is required that is not in this catalog, the user must create a new pose via joint angle commands. The result of this template can be seen in Figure \ref{at_example}. This entire process can take multiple days per object to create and test.
+
+   \begin{figure}[b]
+      \centering
+      \includegraphics[width=2in]{drill_at}
+      \caption{Robonuat 2 current method for manipulation of a drill using the Affordance Template.  This approach requires a CAD model of the object to be grasped and multiple inputs (grasp position, grasp type) from the user}
+      \label{at_example}
+   \end{figure}
+
+It is readily apparent that this method of manipulation can be time consuming and very application specific. If the robot were to encounter an object slightly outside of the current template, a new template must be made. This will increase design, testing, and verification time to an intractible level for the deep space missions of the future. Instead, the design of single, generic models to be used for similar shapes with synergies is proposed. For the cylinder synergies proposed, the same AT framework can be implemented, usign a cylindrical mesh corresponding the diameter of the obect. Then a standard set of approaches can be saved to approach the open side of the cylinder. Finally, the hand pose can be commanded based on the single DoF of diameter to close around the object. This would allow a flashlight, a coffee cup, a screwdriver, or any other cylinder to be picked up using the same template.
+
+\section{METHODS}
+\label{methods}
+
+% take this section from 3 paragraphs down to 3 sentences. We basically say all of this somewhere else. 
+A synergistic command structure can be mathematically defined in (2).
+$$
+q = S\sigma  \eqno{(2)}
+$$
+
+Where q, is the vector of joint angles, S is the synergy matrix, and $\sigma$ is the synergy activation vector which also represents the number of possible synergies that can be activated.  The basis of synergies is that the generic joint displacement, q, can be represented as a function of fewer elements than the number of DoFs of the system.  The matrix S effectively combines or constrains motion in different DoFs to each other. S is a vector of weights that determines the amount of motion for an individual joint resulting from a single input.  In neuroscience, these S matrices are determined by mapping the grasps of various shapes and isolating the movements of individual joints.  The covariances of the various joint angles are analyzed and combined using Principle Component Analysis.  This technique uses machine learning to identify when joints are commonly moved in unison and it assigns a weighing scalar to it based on the relative magnitude of motion.  Rather than identifying and isolating synergies from existing behavior as is done in neuroscience, the authors aim to design a synergy by providing an S matrix such that the finger angles move in unison to produce a cylinder grasp.  For this reason, the synergy matrix will be designed based on grasp shapes for various sized cylinders.
+
+	The objective of this study is to build the commanding infrastructure for R2 to take the inputs of synergy type (e.g. “cylinder”) and a single variable (e.g. diameter) and calculate the synergy matrix, S, from these two inputs. The S matrix will need to then be passed to a to the robot to command the fingers joints to the calculated angles.
+
+\subsection{Syngrasp Modeling}
+
+The first phase is to determine the finger angles for grasps of cylinders of varying diameter using SynGrasp to build an initial model for grasping.  The chosen diameters for grasped objects were 1 in, 1.5 in, 2 in, and 3 in.  The internal contact model in SynGrasp was used to design the grip.  This performed better than traditional inverse kinematic models because it allowed contact with multiple points on the hand rather than only a single poin-of-interest on the end-effector.  The key features such as the number of DoFs, finger length, joint rotation frames, and actuation scheme were matched.  Some areas where the modeling program could not match the actual R2 hand were the compliance of the fingers and the size of the palm.  The Robonaut hand contains 20 movable DoFs but only 12 controllable DoFs.  The thumb is fully controllable along every DoF and contrains two DoFs at the basilar joint with independent controls for andle at the proximal phalanx and distal phalanx.  The index and middle fingers have rotation 2 DoFs at the metacarpophalangeal joint (MCP), pitch and yaw.  The proximal (PIP) and distal (DIP) interphalangeal joints are underactuated such that they move at matching angles.  The ring and little fingers only take a single input value that controls pitch in all three joints (MCP, PIP, and DIP).  These two fingers have no yawing DoF at the MCP.  The Syngrasp model was provided a synergy matrix to reflect this scheme and grips were designed to include these constraints. 
+
+\subsection{Model Refinement}
+ The modeled grasps were validated by loading them onto Robonaut and experimentally checking that the grasps would perform on the actual system as they did in the model.  Robonaut was given a piece of cylindrical aluminum pipe on a tabletop and the predetermined angles from the SynGrasp simulation.  To perform each trial, Robonaut would grasp the object on the tabletop, lift it, rotate it all the way upside down, rotate back, and set back down on the table to ensure that it is a firm grasp and the object will not be dropped.  The grasps were tested and refined in this way to account for some of the model's discrepancies compared to the real-life system.  To command the values, a simple commanding structure was created to calculate the values based on the curve fit coefficients. The object was placed in front of the robot at arbitrary positions along the palm of the robot. The objects were always touching the palm, but the authors varied the location along the palm, sometimes more near the fingers or the thumb, to prove the generality of the approach. This is necessary for future application to a localized object that will have error resulting from sensor uncertainty. The robot was then told to close the fingers to the prescribed amounts, lift, rotate, un-rotate, and return the object to prove a valid grasp.
+
+\subsection{Synergy Developement and Testing}	
+Following modeling and validation,the data corresponding to each joint angle for a given grasp were fit using a nth-order polynomial with grasp diameter as the input.  This single-input set of polynomials serves as our synergy matrix for cylindrical grasps.  The cylindrical grasp synergy matrix was tested on cylindrical  objects of varying diameter and weight.   In addition, the resulting grasp was tested on four objects other than pure cylinders to analyze the performance of this type of synergy applied to different shapes and to motivate the need for additional work in the area.  These objects commanded diameters were measured as the small side of the if rectangle.  Finally, a complex geometric shape of a Dewalt impact driver of standard drill shape was grasped as well.
+ 
+
+\begin{figure}[!b]%
+\centering
+\begin{minipage}{1.2in}%
+      \includegraphics[width=1.2in]{syngrasp_model}
+     \subcaption{}
+\end{minipage}%
+\qquad
+\begin{minipage}{0.05in}%
+
+\end{minipage}%
+\begin{minipage}{1.2in}%
+      \includegraphics[width=1.2in]{syngrasp_grip_top}
+      \subcaption{}
+\end{minipage}%
+
+\caption{By matching the finger dimensions and rotation frames, a SynGrasp model of the Robonaut 2 hand was defined.  Syngrasp uses a kinematics solver to generate grasps such as those shown in (b).  This tool is ideal for developing grasp schemes within a synergy framework. }%
+\label{fig:models}%
+\end{figure}
+
+
+\begin{figure}%
+\centering
+\begin{minipage}{0.9in}%
+      \includegraphics[width=0.9in]{syngrasp_grip}
+      \subcaption{}
+\end{minipage}%
+\qquad
+\begin{minipage}{0.05in}%
+
+\end{minipage}%
+\begin{minipage}{0.9in}%
+      \includegraphics[width=0.9in]{grip_1in}
+      \subcaption{}
+\end{minipage}%
+\qquad
+\begin{minipage}{0.05in}%
+
+\end{minipage}%
+\begin{minipage}{0.9in}%
+      \includegraphics[width=0.9in]{grip_3in}
+     \subcaption{}
+\end{minipage}%
+\caption{The SynGrasp model grasp (a) is shown.  The cylinder remains in the vertical orientation relative to the hand.  In (b) the cylinder has been rotated by contact with the ring and little fingers.  Less rotation is observed when grasping objects of larger diameters (c)}%
+\label{rotatefig}%
+\end{figure}
+
+\section{RESULTS}
+\label{results}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=6in]{Objects2}
+  \caption{Results from cylindrical synergy testing}
+  \label{objects} 
+\end{figure*}
+
+After model validation on the robot and subsequent adjustments, the robot was able to manipulate nearly all of the 20 common prismatic objects found in a lab using the single synergy commanding structure. The authors will discuss the model validations steps, the resulting synergy relationships, the results from the tested cases, and finally a discussion of these results.
+
+\subsection{Model Validation}
+
+The SynGrasp model assumes the friction amoung multiple joints actuated with a single tendon is equal and all the joints close together. However, this was not the case in practice, especially with the ring and little fingers. On the robot, the proximal joint will always actuate first until it contacts, and then the medial and distal joints will move due to the friction inherent in the system. The grasp model was updated for the increased commanded angles needed. Second, the 4 DoF thumb has many possible locations in which it could contact the cylinder in Syngrasp, and due to the redundant DoF, the thumb location chose performed poorly for larger objects near 3in. The thumb position was adjusted via testing, however, the index and middle finger values still proved valid.  Upon testing the initial SynGrasp grip poses on R2, a number of shortcomings were revealed and addressed. 
+Once the finals values from testing were established, the four positions for each finger were plotted and the corresponding nth polynomial to match the trends. The maximum order used was three, however, many of the joints required lower orders. The resulting relationships were relatively simple which intuitively makes sense. As the object gets larger, the hand opens more. The thumb is the only digit which changed orientations substantially as the diameters got larger as it has more DoF to move into a suitable position. The graph of the thumb curve fits can be seen in Fig. \ref{thumb_fits}
+
+\begin{figure}[t]
+\centering
+  \begin{minipage}{2in}
+      \includegraphics[width=1.5in]{pinky_out_crop}
+      \subcaption{}
+  \end{minipage}%
+  \begin{minipage}{2in}
+      \includegraphics[width=1.5in]{pinky_in_crop}
+      \subcaption{}
+  \end{minipage}
+\caption{Initial (a) and final (b) joint angles for ring and little fingers. The initial round of testing following SynGrasp model generation resulted in no contact in the ring and little fingers.  This result in due to tendon friction in the actual system that reduced the closure angle to a lower value than commanded.  These values were updated to allow for better contact on these fingers resulting in grasps shown in (b)}%
+\label{fig:models}%
+\end{figure}
+
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=\linewidth]{Thumb_Fits}
+  \caption{Thumb joint angles when grasping cyclinders of varyin diameter.  The curvefit shows interpolation between collected data points.}
+  \label{thumb_fits} 
+\end{figure}
+
+\subsection{Synergy Testing}
+
+Twenty (20) common objects found in a lab were tested to validate the effectiveness of the curve fits creating the synergy. The list of these objects as well as their success can be viewed in figure \ref{objects}.  Of the 20 objects manipulated, 17 were manipulated with no issues, 2 slipped in the grip, and 1 was dropped outright. 
+
+Of the objects selected and tested, 15 could be considered pure cylinders. Of these objects, the only one not successfuly manipulated at all was the large drill. This object slide out of the robots grasp as it tried to manipulate it. The a qualitative look at the grasp suggested the fingers were in an appropriate position. However, this was the heaviest object manipulated by the robot (INSERT WEIGHT) and the friction that the robot could apply through the normal force and the gloves material was inadequate to manipulate it. The authors believe this is not achieveable by the robot regardless of the method of grasp determination. In addition, the robot did not maintain a firm grasp on the hammer. The hammer shank is near the smallest object size that the robot is able to grasp even with a full hand close commanded position. This is due the kinematics of the hand joints, and the friction of the glove. The hammer slide in the grasp, but was not dropped. In practice, it would be able to manipulate this object to a new location. All of the other objects the robot maintained solid control of the object through the manipulation. 
+
+The five prismatic objects other than pure cylinders were all successfully grasped. This suggests that this grasp abstracts to more than cylinders, instead, it could be considered a power grasp synergy based on the Cutkosky Grasps, further generalzing the theory. 
+
+Finally, scheme was unable to grasp the Dewalt impact driver of a standard drill shape. As the robot closed it's hand, the index finger caught on the trigger, not allowing the hand to fully wrap around the handle. Upon the rotation action, the Dewalt was dropped. This shows that while the synergy concept is useful, it is not directly applicable to all cases and gives an indication of the usefulness of individually actuated joints. Typical manipulation of this tool has the index finger extended, allowing the other three to wrap underneath using the cylinder values. This could be achieved with a second synergy in combination with the cylinder synergy that weights the extension of the index finger. The combination of these two synergies could create the Dewalt grasp and actuation motions in the same framework. This is a concept the authors are leaving for future work. 
+
+
+\section{Discussion}
+
+	The validation process demonstrated that SynGrasp was a useful modeling tool that provided an accurate estimate for the thumb, index and middle fingers.  The ring and little fingers were not modelled as successfully using this method, due to the tendon friction in the actual system.  Using the model joint angles, these fingers would not be in contact with the object to be grasped and always needed to be closed further.  Despite this, SynGrasp provided a very useful model and starting point for grasp refinement.  The main changes that were made to the modeled grips were making the joint angles slightly smaller for a firmer grasp than the model predicted.  This need is likely due to the large pad in Robonaut’s palm.  This feature could not be included in our software model, as it does not allow adjustments to the geometry of the palm.  SynGrasp modeling will be even more useful for prediction and verification of grasping schemes as other synergies are integrated into the system.  SynGrasp will provide a means to test these synergy grasps as well as evaluating combinations of them (i.e. cylinder and index finger pinch grasp for a drill) to allow the hand to easily grasp more complex geometries.
+              A result from the grasping tests were that cylinders near 4 in are grasped by the robot in a pinch grasp fashion due to the size, so a future pinch grasp model would encorporate the larger objects. Also, the result of the synergy being unable to hand to the complex geometry of the drill shows that while the synergy concept is useful, it is not directly applicable to all cases and gives an indication of the usefulness of individually actuated joints. Typical manipulation of this tool has the index finger extended, allowing the other 3 to wrap underneath using the cylinder values. This could be achieved with a second synergy in combination with the cylinder synergy that weights the extension of the index finger. The combination of these two synergies could create the Dewalt grasp and actuation motions in the same framework. This is a concept the authors are leaving for furture work. 
+
+Through this work, the authors conjecture that while the previous approaches taken have sufficiently modeled the hand motions similar to a human, there has been no framework for modeling grasp motions intuitive to a robot user. Santello's work exposed the usefulness of decomposing hand motions into synergies to allow for control on a lower degree of freedom, however, this results in a different control problem to combine non-intuitive motions. Other works such as (REFERENCE CORRECT WORK) use online planning and an accurate object model to determine the appropriate grasp which creates the need for very accurate models or sensors as well as online computational time. The system proposed creates a simple and intuitive model for grasping. Once generated, this model requires effectively no online computation and can be executed with a single, easily understood, user input. 
+
+ 
+\section{CONCLUSIONS}
+
+The authors demonstrated a novel concept to incorporate the synergy concept developed in neuroscience and analyzed in practice by Santello into an intuitive commanding strategy for a high DoF robot hand on Robonaut 2. The creation of a synergy based on the diameter of a cylindrical object allowed cylinders of varying sizes to be effectively grasped via a single command input. The results of this test suggest that this concept could be used to quickly broaden the library of objects the robot can manipulate from a small, specialized set, into a nearly infinite category of manipulatable cylinders. 
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\begin{thebibliography}{99}
+
+%	\bibitem{affordance_templates} Hart, Stephen, Paul Dinh, and Kimberly Hambuchen. "The affordance template ROS package for robot task programming." Robotics and Automation (ICRA), 2015 IEEE International Conference on. IEEE, 2015
+%	\bibitem{r2_diftler} M. A. Diftler et al., "Robonaut 2 - The first humanoid robot in space," 2011 IEEE International Conference on Robotics and Automation, Shanghai, 2011, pp. 2178-2183.
+%	\bibitem{fukushima_robots} Nagatani, Keiji, et al. "Emergency response to the nuclear accident at the Fukushima Daiichi Nuclear Power Plants using mobile rescue robots." Journal of Field Robotics 30.1 (2013): 44-63.
+%	\bibitem{r2_hand} L. B. Bridgewater et al., "The Robonaut 2 Hand - Designed to Do Work With Tools." 2012 IEEE International Conference on Robotics and Automation, St. Paul, MN, 2012.
+%	\bibitem{hrp3} Kaneko, K, et al. “Humanoid Robot HRP-3.” Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems, Nice, France, pp. 2471-2478, 2008.
+%	\bibitem{DRL} Grebenstein, M. et al, “Antagonistically Driven Finger Design for the Anthropomorphic DLR Hand Arm System.” Proceedings of the IEEERAS International Conference on Humanoid Robots, Nashville, TN, USA, D. pp. 609-616, 2010.
+%	\bibitem{DRC_Yanco} H. A. Yanco, A. Norton, W. Ober, D. Shane, A. Skinner, and J. M. Vice, “Analysis of Human-robot Interaction at the DARPA Robotics Challenge Trials.,” J. Field Robotics, vol. 32, no. 3, pp. 420–444, 2015.
+%	\bibitem{softhand} C. Della Santina, G. Grioli, M. Catalano, A. Brando and A. Bicchi, "Dexterity augmentation on a synergistic hand: The Pisa/IIT SoftHand+," 2015 IEEE-RAS 15th International Conference on Humanoid Robots (Humanoids), Seoul, 2015, pp. 497-503.
+%	\bibitem{Cutkosky} M. R. Cutkosky, "On grasp choice, grasp models, and the design of hands for manufacturing tasks," in IEEE Transactions on Robotics and Automation, vol. 5, no. 3, pp. 269-279, Jun 1989.
+%	\bibitem{IHMC} Johnson, Matthew, et al. "Team IHMC's lessons learned from the DARPA Robotics Challenge trials." Journal of Field Robotics 32.2 (2015): 192-208.
+%\end{thebibliography}
+
+\bibliographystyle{IEEEtran}
+\bibliography{BibFile}
+
+\end{document}

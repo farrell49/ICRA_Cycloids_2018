@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Cycloid_ICRA_v1.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Cycloid_ICRA_Bib.bib
+Warning--I didn't find a database entry for "curiosity"
+Warning--I didn't find a database entry for "harmonic_drive"
+Warning--I didn't find a database entry for "FIND"
+Warning--I didn't find a database entry for "machine_tol"
+Warning--I didn't find a database entry for "cycloid_v_harmonic"
+-- IEEEtran.bst version 1.11 (2003/04/02) by Michael Shell.
+-- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in hwang_hsieh
+Warning--empty year in hwang_hsieh
+Warning--empty journal in li
+Warning--empty year in li
+Warning--empty journal in hsieh_traditional
+Warning--empty year in hsieh_traditional
+Warning--empty journal in hsieh_dynamics
+Warning--empty year in hsieh_dynamics
+Warning--empty journal in unified_approach
+Warning--empty year in unified_approach
+
+Done.
+You've used 9 entries,
+            3975 wiz_defined-function locations,
+            846 strings with 8971 characters,
+and the built_in function-call counts, 6446 in all, are:
+= -- 504
+> -- 94
+< -- 76
++ -- 72
+- -- 19
+* -- 330
+:= -- 957
+add.period$ -- 15
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 186
+cite$ -- 19
+duplicate$ -- 427
+empty$ -- 485
+format.name$ -- 8
+if$ -- 1432
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 65
+newline$ -- 63
+num.names$ -- 6
+pop$ -- 167
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 476
+stack$ -- 0
+substring$ -- 467
+swap$ -- 368
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 0
+warning$ -- 10
+while$ -- 31
+width$ -- 10
+write$ -- 110
+(There were 15 warnings)

@@ -1,0 +1,81 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{1956}
+L.~K. D.W.~Botsiber, ``Design and performance of the cycloid speed reducer,''
+  in \emph{Machine Design 28}, 1956, pp. 65--69.
+
+\bibitem{on_the_lobe}
+\BIBentryALTinterwordspacing
+On the lobe profile design in a cycloid reducer using instant velocity center.
+  [Online]. Available:
+  \url{http://ac.els-cdn.com.ezproxy.rice.edu/S0094114X05001321/1-s2.0-S0094114X05001321-main.pdf?_tid=d8985f7c-38b9-11e7-aafe-00000aacb35f&acdnat=1494775831_fd47f76ef0846e6124fbf98ebd50d1fe}
+\BIBentrySTDinterwordspacing
+
+\bibitem{design_and_application}
+\BIBentryALTinterwordspacing
+{DESIGN} {AND} {APPLICATION} {GUIDELINES} {FOR} {CYCLOID} {DRIVES} {WITH}
+  {MACHINING} {TOLERANCES}. [Online]. Available:
+  \url{http://ac.els-cdn.com.ezproxy.rice.edu/0094114X9090064Q/1-s2.0-0094114X9090064Q-main.pdf?_tid=547f07f8-38ba-11e7-a083-00000aacb361&acdnat=1494776040_b3f5b469ff9652c3dd74feee25dd0cf7}
+\BIBentrySTDinterwordspacing
+
+\bibitem{hwang_hsieh}
+\BIBentryALTinterwordspacing
+Y.-W. Hwang and C.-F. Hsieh, ``Geometric design using hypotrochoid and
+  nonundercutting conditions for an internal cycloidal gear,'' vol. 129, no.~4,
+  pp. 413--420. [Online]. Available: \url{http://dx.doi.org/10.1115/1.2437806}
+\BIBentrySTDinterwordspacing
+
+\bibitem{li}
+\BIBentryALTinterwordspacing
+S.~Li, ``Design and strength analysis methods of the trochoidal gear
+  reducers,'' vol.~81, pp. 140--154. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S0094114X14001682}
+\BIBentrySTDinterwordspacing
+
+\bibitem{hsieh_traditional}
+\BIBentryALTinterwordspacing
+C.-F. Hsieh, ``Traditional versus improved designs for cycloidal speed reducers
+  with a small tooth difference: The effect on dynamics,'' vol.~86, pp. 15--35.
+  [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S0094114X14002924}
+\BIBentrySTDinterwordspacing
+
+\bibitem{hsieh_dynamics}
+\BIBentryALTinterwordspacing
+------, ``Dynamics analysis of cycloidal speed reducers with pinwheel and
+  nonpinwheel designs,'' vol. 136, no.~9, pp. 091\,008--091\,008--11. [Online].
+  Available: \url{http://dx.doi.org/10.1115/1.4027850}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Malhorta}
+\BIBentryALTinterwordspacing
+{ANALYSIS} {OF} a {CYCLOID} {SPEED} {REDUCER}. [Online]. Available:
+  \url{http://ac.els-cdn.com.ezproxy.rice.edu/0094114X83900666/1-s2.0-0094114X83900666-main.pdf?_tid=1788b3ee-38ba-11e7-b09b-00000aab0f27&acdnat=1494775936_01907cd1147a6ce5ef1a3261e06c5f53}
+\BIBentrySTDinterwordspacing
+
+\bibitem{unified_approach}
+\BIBentryALTinterwordspacing
+J.~W. Sensinger, ``Unified approach to cycloid drive profile, stress, and
+  efficiency optimization,'' vol. 132, no.~2, pp. 024\,503--024\,503--5.
+  [Online]. Available: \url{http://dx.doi.org/10.1115/1.4000832}
+\BIBentrySTDinterwordspacing
+
+\end{thebibliography}
