@@ -20,9 +20,8 @@ Time Used & Output Torque (Nm) & Output Speed (RPM) & Actuator Torque (Nm) & Act
 
 
    
-In 2007 and 2008, NASA developed a manned rover prototype for planetary surfaces for future missions \cite{rover}. This robotic vehicle is made up of six independent wheel modules, each with their own propulsion, steering, and both active and passive suspension. In 2014, a new prototype wheel module was designed and created to analyze new potential technologies that could be used in these application. In the new design layout, it was possible for the propulsion wheels to counter-rotate against the steering and put large shock loads into the steering system.These requirements for a high load, compact package, high shock load, and tolerance of backlash lent itself to the selection of a cycloidal drive for the steering actuator. This actuator was then selected for the continued testing presented in this paper. The prototype wheel module layout can be seen in Fig \ref{wheel_module}.
+In 2007 and 2008, NASA developed a manned rover prototype for planetary surfaces for future missions \cite{rover}. This robotic vehicle is made up of six independent wheel modules, each with their own propulsion, steering, and both active and passive suspension. In 2014, a new prototype wheel module was designed and created to analyze potential technologies that could be used in these applications. In the new design layout, it was possible for the propulsion wheels to counter-rotate against the steering and put large shock loads into the steering system. These requirements for a high load, compact package, high shock load, and tolerance of backlash lent themselves to the selection of a cycloidal drive for the steering actuator. The prototype wheel module layout can be seen in Fig \ref{wheel_module}.
 
-NOTE FOR O'MALLEY: Does this figure add anything other than length? 
    \begin{figure}[t]
       \centering
       \includegraphics[width=0.50\linewidth]{wheel_module_CAD}
@@ -30,9 +29,9 @@ NOTE FOR O'MALLEY: Does this figure add anything other than length?
       \label{wheel_module}
    \end{figure}
    
-Based on the load cases the actuator was required to output a stall torque of 2,440 Nm (1800 ft-lb) with a max output speed of 1.57 rad/s (90 deg/s) at 1,626 Nm (1200 ft-lb). The required torque speed data points can be seen in Table \ref{duty_cycle} with an assumed loss of 88\% chosen based on the available literature. The actuator layout for the vehicle placed the motor and cycloid off center of the steering axis with an additional 5:1 reduction into the steering column, thus decreasing the torque needed for the cycloid output, but increasing the potential shock loading. 
+Based on the load cases, the actuator was required to output a stall torque of 2,440 Nm (1800 ft-lb) with a max output speed of 1.57 rad/s (90 deg/s) at 1,626 Nm (1200 ft-lb). The required torque/speed data points are presented in Table \ref{duty_cycle} with an assumed loss of 88\% chosen based on the available literature. The actuator layout for the vehicle placed the motor and cycloid off center of the steering axis with an additional 5:1 reduction into the steering column, thus decreasing the torque needed for the cycloid output, but increasing the potential shock loading. 
 
-Many sources have laid out the design parameters for these drives and the equations are provided below for completeness. Shin and Kwon \cite{on_the_lobe} presented the mathematical definition of the cycloid profile
+Many sources have laid out the design parameters for these drives and the equations are provided below for completeness. Shin and Kwon \cite{on_the_lobe} presented the mathematical definition of the cycloid profile as
 
 \begin{equation} \label{eq:1}
 C_x = R cos\phi -R_r cos(\phi + \psi) - e cos((Z_1 + 1)\phi) 
@@ -52,7 +51,7 @@ Using both the formula for the reduction in diameter of the cycloid disk to acco
 F_{cam} = \frac{T}{e Z}.
 \end{equation}
 
-The simplified stress equations where R and R\textsubscript{r} are defined above, t is the contact thickness, and b is the width of contact determined by (\ref{eq:7}) and (\ref{eq:8}) are
+The simplified stress equations where \textit{R} and \textit{R\textsubscript{r}} are defined above, \textit{t} is the contact thickness, and \textit{b} is the width of contact determined by (\ref{eq:7}) and (\ref{eq:8}) are
 
 \begin{equation} \label{eq:5}
 F = \frac{T}{R - R_r}
