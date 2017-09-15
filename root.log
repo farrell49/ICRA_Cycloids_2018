@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.29)  14 SEP 2017 18:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.13)  14 SEP 2017 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **root.tex
 (./root.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 30 languages loaded.
 (./ieeeconf.cls
 Document Class: ieeeconf 2016/4/23 revision V1.6b by Pradeep Misra
 \@IEEEtrantmpdimenA=\dimen102
@@ -444,94 +444,160 @@ Underfull \hbox (badness 2181) in paragraph at lines 49--49
 -ter.
  []
 
-(./abstract.tex) (./intro.tex
+(./sections/abstract.tex) (./sections/intro.tex
 
-LaTeX Warning: Citation `curiosity' on page 1 undefined on input line 2.
+LaTeX Warning: Citation `curiosity' on page 1 undefined on input line 3.
 
-<cycloid_cartoon_v2.png, id=1, 872.25874pt x 731.73375pt>
-File: cycloid_cartoon_v2.png Graphic file (type png)
+<images/cycloid_cartoon_v2.png, id=1, 872.25874pt x 731.73375pt>
+File: images/cycloid_cartoon_v2.png Graphic file (type png)
 
-<use cycloid_cartoon_v2.png>
-Package pdftex.def Info: cycloid_cartoon_v2.png used on input line 11.
+<use images/cycloid_cartoon_v2.png>
+Package pdftex.def Info: images/cycloid_cartoon_v2.png used on input line 21.
 (pdftex.def)             Requested size: 122.85905pt x 103.05612pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 17.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./cycloid_cartoon_v2.png>]) (./design.tex
-<wheel_module_CAD.png, id=16, 386.94562pt x 535.2497pt>
-File: wheel_module_CAD.png Graphic file (type png)
+LaTeX Warning: Citation `1956' on page 1 undefined on input line 29.
 
-<use wheel_module_CAD.png>
-Package pdftex.def Info: wheel_module_CAD.png used on input line 28.
+
+LaTeX Warning: Citation `on_the_lobe' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Citation `hwang_hsieh' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Citation `design_and_application' on page 1 undefined on input l
+ine 39.
+
+
+LaTeX Warning: Citation `li' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Citation `hsieh_traditional' on page 1 undefined on input line 3
+9.
+
+
+LaTeX Warning: Citation `hsieh_dynamics' on page 1 undefined on input line 39.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./images/cycloid_cartoon_v2.png>]
+
+LaTeX Warning: Citation `Malhorta' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Citation `unified_approach' on page 2 undefined on input line 44
+.
+
+
+LaTeX Warning: Citation `cycloid_vs_harmonic' on page 2 undefined on input line
+ 45.
+
+
+LaTeX Warning: Citation `hsieh_dynamics' on page 2 undefined on input line 49.
+
+) (./sections/design.tex
+
+LaTeX Warning: Citation `rover' on page 2 undefined on input line 21.
+
+<images/wheel_module_CAD.PNG, id=16, 386.94562pt x 535.2497pt>
+File: images/wheel_module_CAD.PNG Graphic file (type png)
+
+<use images/wheel_module_CAD.PNG>
+Package pdftex.def Info: images/wheel_module_CAD.PNG used on input line 30.
 (pdftex.def)             Requested size: 122.85905pt x 169.94397pt.
-LaTeX Font Info:    Try loading font information for LGR+ptm on input line 47.
-LaTeX Font Info:    No file LGRptm.fd. on input line 47.
 
+
+LaTeX Warning: Citation `on_the_lobe' on page 2 undefined on input line 43.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 45.
+LaTeX Font Info:    Try loading font information for LGR+ptm on input line 55.
+LaTeX Font Info:    No file LGRptm.fd. on input line 55.
 
 LaTeX Font Warning: Font shape `LGR/ptm/m/n' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 47.
+(Font)              using `LGR/cmr/m/n' instead on input line 55.
 
-[2 <./wheel_module_CAD.png>]
-<exploded_labeled.jpg, id=28, 271.0125pt x 383.93437pt>
-File: exploded_labeled.jpg Graphic file (type jpg)
 
-<use exploded_labeled.jpg>
-Package pdftex.def Info: exploded_labeled.jpg used on input line 72.
+LaTeX Warning: Citation `machine_design' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Citation `design_and_application' on page 2 undefined on input l
+ine 58.
+
+
+LaTeX Warning: Citation `ye' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Citation `unified_approach' on page 2 undefined on input line 59
+.
+
+[2 <./images/wheel_module_CAD.PNG>]
+<images/exploded_labeled.JPG, id=29, 271.0125pt x 383.93437pt>
+File: images/exploded_labeled.JPG Graphic file (type jpg)
+
+<use images/exploded_labeled.JPG>
+Package pdftex.def Info: images/exploded_labeled.JPG used on input line 83.
 (pdftex.def)             Requested size: 184.28857pt x 261.08363pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 73.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 87.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) (./methods.tex
-<test_stand.png, id=29, 725.71124pt x 742.775pt>
-File: test_stand.png Graphic file (type png)
- <use test_stand.png>
-Package pdftex.def Info: test_stand.png used on input line 4.
-(pdftex.def)             Requested size: 184.28857pt x 188.61742pt.
- [3 <./exploded_labeled.jpg> <./test_stand.png>]
-<eff_test_profile_v3.png, id=35, 724.95844pt x 557.83406pt>
-File: eff_test_profile_v3.png Graphic file (type png)
+)
 
-<use eff_test_profile_v3.png>
-Package pdftex.def Info: eff_test_profile_v3.png used on input line 15.
+LaTeX Warning: Citation `electric_machines' on page 3 undefined on input line 1
+01.
+
+) (./sections/methods.tex
+<images/test_stand.png, id=30, 725.71124pt x 742.775pt>
+File: images/test_stand.png Graphic file (type png)
+
+<use images/test_stand.png>
+Package pdftex.def Info: images/test_stand.png used on input line 3.
+(pdftex.def)             Requested size: 184.28857pt x 188.61742pt.
+ [3 <./images/exploded_labeled.JPG> <./images/test_stand.png>] <images/eff_test
+_profile_v3.png, id=35, 724.95844pt x 557.83406pt>
+File: images/eff_test_profile_v3.png Graphic file (type png)
+
+<use images/eff_test_profile_v3.png>
+Package pdftex.def Info: images/eff_test_profile_v3.png used on input line 29.
 (pdftex.def)             Requested size: 245.71811pt x 189.06523pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<long_run_plot_v3.png, id=36, 1054.6903pt x 387.69844pt>
-File: long_run_plot_v3.png Graphic file (type png)
+<images/long_run_plot_v3.png, id=36, 1054.6903pt x 387.69844pt>
+File: images/long_run_plot_v3.png Graphic file (type png)
 
-<use long_run_plot_v3.png>
-Package pdftex.def Info: long_run_plot_v3.png used on input line 58.
+<use images/long_run_plot_v3.png>
+Package pdftex.def Info: images/long_run_plot_v3.png used on input line 88.
 (pdftex.def)             Requested size: 505.89pt x 185.95706pt.
-) (./results.tex
-<eff_test_bar_plot_v2.png, id=37, 542.77782pt x 316.18124pt>
-File: eff_test_bar_plot_v2.png Graphic file (type png)
+) (./sections/results.tex
+<images/eff_test_bar_plot_v2.png, id=37, 542.77782pt x 316.18124pt>
+File: images/eff_test_bar_plot_v2.png Graphic file (type png)
 
-<use eff_test_bar_plot_v2.png>
-Package pdftex.def Info: eff_test_bar_plot_v2.png used on input line 4.
+<use images/eff_test_bar_plot_v2.png>
+Package pdftex.def Info: images/eff_test_bar_plot_v2.png used on input line 4.
 (pdftex.def)             Requested size: 245.71811pt x 143.139pt.
-) (./discussion.tex
+) (./sections/discussion.tex
 
-LaTeX Warning: Citation `harmonic_sheet' on page 4 undefined on input line 1.
+LaTeX Warning: Citation `harmonic_sheet' on page 4 undefined on input line 6.
 
-[4 <./eff_test_profile_v3.png (PNG copy)>]
-<eff_comp_v2.png, id=41, 453.94594pt x 275.52937pt>
-File: eff_comp_v2.png Graphic file (type png)
- <use eff_comp_v2.png>
-Package pdftex.def Info: eff_comp_v2.png used on input line 5.
+[4 <./images/eff_test_profile_v3.png (PNG copy)>]
+<images/eff_comp_v2.png, id=41, 453.94594pt x 275.52937pt>
+File: images/eff_comp_v2.png Graphic file (type png)
+
+<use images/eff_comp_v2.png>
+Package pdftex.def Info: images/eff_comp_v2.png used on input line 11.
 (pdftex.def)             Requested size: 245.71811pt x 149.14099pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
 [][][]$\OT1/pcr/m/n/8 https : / / lucasoil . com / products / grease /
  []
 
-) [5 <./long_run_plot_v3.png (PNG copy)> <./eff_test_bar_plot_v2.png (PNG copy)
-> <./eff_comp_v2.png (PNG copy)>] (./conclusion.tex) (./acknowledgements.tex)
-(./root.bbl)
+[5 <./images/long_run_plot_v3.png (PNG copy)> <./images/eff_test_bar_plot_v2.pn
+g (PNG copy)> <./images/eff_comp_v2.png (PNG copy)>])
+(./sections/conclusion.tex) (./sections/acknowledgements.tex) (./root.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -543,7 +609,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[6] (./root.aux)
+[6
+
+] (./root.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -552,13 +620,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4896 strings out of 493304
- 80823 string characters out of 6139871
- 137015 words of memory out of 5000000
- 8260 multiletter control sequences out of 15000+600000
+ 4900 strings out of 494392
+ 81126 string characters out of 6164779
+ 133196 words of memory out of 5000000
+ 8047 multiletter control sequences out of 15000+600000
  42709 words of font info for 82 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 42i,9n,40p,1428b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 395 hyphenation exceptions out of 8191
+ 42i,9n,40p,459b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -573,7 +641,7 @@ e/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on root.pdf (6 pages, 1275581 bytes).
+Output written on root.pdf (6 pages, 1270066 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
