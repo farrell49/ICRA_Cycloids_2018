@@ -8,18 +8,17 @@
    \label{test_setup}
 \end{figure}
 
-The intent of testing the cycloidal drive was to experimentally determine and compare the in-use efficiency results to the published performance data for a comparable harmonic drive.
+The intent of testing the cycloidal drive is to experimentally determine and compare the in-use efficiency results to the published performance data for a comparable harmonic drive.
 To accomplish this, the actuator was mounted to a Futek TF600 5000inlb load cell to measure output torque of the actuator.
 The load cell signal was collected through a analog to digital converter and converted to standard units on the motor driver.
 A verification of torque readings was completed using a calibrated torque wrench to ensure accuracy of the conversion.
 Load was regulated by a Magtrol HB-1750 hysteresis brake.
-A 36:1 speed increase was added via three chain stages between the output of the actuator and the hysteresis brake to achieve larger applied loads.
+A 36:1 speed increase was added via three chain stages between the output of the actuator and the hysteresis brake to achieve the desired applied loads.
 The hysteresis brake was powered using a separate 24V Lambda-TDK power supply that was controlled through a RS-485 communication link to the test computer.
-NASA's 'turbodriver' was the motor driver used for commanding motor currents.
-The motor driver was powered by a separate TDK-Lambda power supply at 150V and up to 5A.
+NASA's 'turbodriver' motor driver was used for commanding motor currents.
+The motor driver was powered by a TDK-Lambda 12V supply for logic power and a TDK-Lambda 150V and 5A supply for high voltage power.
 A hysteresis current controller was used on the motor drive to accurately provide torque producing current to the motor.
 The motor driver monitored the actuator power by measuring torque from the load cell and speed with an incremental encoder located at the actuator motor shaft.
-Input power was measured from the power supply voltage and current.
 The test computer monitored the high voltage supply and recorded voltage and current to determine input power to the system and recieved data from the motor driver to calculate output power.
 The test setup is shown in Fig \ref{test_setup}.
 
@@ -82,9 +81,9 @@ The total runtime of the system not including the initial checkout and verificat
 
 It should be noted that the actuator was used briefly in the robot validation after initial development and construction of the prototype wheel module.
 The total time of use was approximately three hours.
-Afterwards, it was removed from the wheel module and subjected to the individual testing that is discussed in this work.
+Afterwards, it was removed from the wheel module and subjected to the characterization that is discussed in this work.
 The motor has a continuous current rating of 4.3 A\textsubscript{rms} and a peak rating of 15A\textsubscript{rms}.
-The actuator was designed to be fluid cooled to allow operations above the continuous values, but this could not be achieved during testing.
+The actuator was designed to be liquid cooled to allow operations above the continuous values, but this could not be achieved during testing.
 For long duration testing, the torque values were decreased to avoid thermal issues.
 The motor was tested to approximately 6A\textsubscript{rms} during efficiency testing due to the limit of the power supply.
 Also, the motor driver's rated limits are 150V, therefore the actuator's maximum rated speeds could not be attained.
