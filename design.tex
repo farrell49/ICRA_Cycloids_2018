@@ -24,7 +24,7 @@ In 2007 and 2008, NASA developed a manned rover prototype for planetary surfaces
 
    \begin{figure}[t]
       \centering
-      \includegraphics[width=0.50\linewidth]{images/wheel_module_CAD}
+      \includegraphics[width=0.50\linewidth]{wheel_module_CAD}
       \caption{CAD model of rover wheel module prototype. Suspension arms hold the steering column. Each wheel has an in-wheel propulsion motor.}
       \label{wheel_module}
    \end{figure}
@@ -68,11 +68,11 @@ R_2 = \frac{(R-eZ - e)^3}{R-e(Z-1)^2} - R_r.
 
    \begin{figure}[!b]
       \centering
-      \includegraphics[width=0.75\linewidth]{images/exploded_labeled}
+      \includegraphics[width=0.75\linewidth]{exploded_labeled}
       \caption{Exploded view of the cycloidal reducer. Three wobble plates are driven by the input shaft with 120\textdegree\ offsets. The ring pins are are free pins inserted in the housing. The output has pins that run through all three wobble plates to harness the counter-rotation for the drive output.}
       \label{cycloid_exploded}
    \end{figure}
    
-The stress calculations and trading of overall size and ratio led to a necessary plate thickness of 2.38cm (0.9375in). Instead of a single large plate, three wobble plates were selected to split the load on the central input shaft across three bearings as well as to build in natural balance for the actuator. If a single plate is used, a counterbalance must be added to avoid extreme vibration. In this case, the three plates were offset 120\textdegree\ to balance these loads and vibration. This adds additional stack height to the system to allow separation between the plates. This arrangement allows the large design loads to be able to be handled by the system. The exploded view of this design can be seen in Fig \ref{cycloid_exploded}. 
+The stress calculations and trading of overall size and ratio led to a necessary plate thickness of 3.81cm (1.5in) ( (TODO: Verify). Instead of a single large plate, three wobble plates were selected to split the load on the central input shaft across three bearings as well as to build in natural balance for the actuator. If a single plate is used, a counterbalance must be added to avoid extreme vibration. In this case, the three plates were offset 120\textdegree\ to balance these loads and vibration. This adds additional stack height to the system to allow separation between the plates. This arrangement allows the large design loads to be able to be handled by the system. The exploded view of this design can be seen in Fig \ref{cycloid_exploded}. 
 
 The actuator uses a Parker Frameless Kit Motor, model K089200-7Y with no hall effect sensors and is commutated using a Renishaw RM-44 magnetic incremental and absolute position sensor. The final reduction is 59:1 followed by the final 5:1 output gear. The system is commutated using the delta hysteresis commutation scheme using velocity control \cite{electric_machines}. 
