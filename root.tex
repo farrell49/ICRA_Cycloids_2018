@@ -2,7 +2,8 @@
 %2345678901234567890123456789012345678901234567890123456789012345678901234567890
 %        1         2         3         4         5         6         7         8
 
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+\documentclass[twocolumn,10pt]{asme2e}
+\special{papersize=8.5in,11in}
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{cite}
@@ -13,34 +14,60 @@
 \usepackage{fixltx2e}
 
 
-%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+\confshortname{IDETC/CIE 2009}
+\conffullname{the ASME 2009 International Design Engineering Technical Conferences \&\\
+	Computers and Information in Engineering Conference}
 
-\IEEEoverridecommandlockouts                              % This command is only needed if 
-                                                          % you want to use the \thanks command
+%%%%% for date in a single month, use
+%\confdate{24-28}
+%\confmonth{September}
+%%%%% for date across two months, use
+\confdate{August 30-September 2}
+\confyear{2009}
+\confcity{San Diego}
+\confcountry{USA}
 
-\overrideIEEEmargins                                      % Needed to meet printer requirements.
+%%% Replace DETC2009/MESA-12345 with the number supplied to you 
+%%% by ASME for your paper.
+\papernum{DETC2009/MESA-12345}
 
-% See the \addtolength command later in the file to balance the column lengths
-% on the last page of the document
-
-% The following packages can be found on http:\\www.ctan.org
-%\usepackage{graphics} % for pdf, bitmapped graphics files
-%\usepackage{epsfig} % for postscript graphics files
-%\usepackage{mathptmx} % assumes new font selection scheme installed
-%\usepackage{times} % assumes new font selection scheme installed
-%\usepackage{amsmath} % assumes amsmath package installed
-%\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
 Cycloidal Geartrain In-Use Efficiency Study
 }
 
-\author{Logan C. Farrell$^{1}$, James Holley$^{2}$, William Bluethmann$^{3}$, and Marcia K. O'Malley$^{4}$% <-this % stops a space
-\thanks{$^{1}$Logan Farrell is with the Department of Mechanical Engineering at Rice University and NASA: Johnson Space Center.
-		{\tt\small Logan.C.Farrell@NASA.gov}}%
-\thanks{$^{2}$James Holley is with the Department of Mechanical Engineering at Rice University and NASA: Johnson Space Center.}%
-\thanks{$^{3}$William Bluethmann is the project manager for rovers at NASA: Johnson Space Center.}%
-\thanks{$^{4}$Marcia O'Malley is on the Faculty in the Department of Mechanical Engineering at Rice University, Houston, TX}%
+%%% first author
+\author{Logan C. Farrell\thanks{Address all correspondence to this author.}
+	\affiliation{
+		NASA\\
+		Robotics, Software and Simulation Division\\
+		Johnson Space Center\\
+		Houston, Texas 77598\\
+		Email: logan.c.farrell@nasa.gov
+	}	
+}
+\author{James Holley
+	\affiliation{
+		NASA\\
+		Robotics, Software and Simulation Division\\
+		Johnson Space Center\\
+		Houston, Texas 77598\\
+	}	
+}
+\author{William Bluethmann
+	\affiliation{
+		NASA\\
+		Robotics, Software and Simulation Division\\
+		Johnson Space Center\\
+		Houston, Texas 77598\\
+	}	
+}
+\author{Marcia K. O'Malley
+	\affiliation{
+		Department of Mechanical Engineering\\
+		Rice University\\
+		Houston, Texas 77005\\
+	}	
 }
 
 
