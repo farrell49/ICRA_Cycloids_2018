@@ -22,6 +22,7 @@ The motor driver monitored the actuator power by measuring torque from the load 
 The test computer monitored the high voltage supply and recorded voltage and current to determine input power to the system and recieved data from the motor driver to calculate output power.
 The test setup is shown in Fig \ref{test_setup}.
 
+\todo[inline]{added wording that we have verified their maps on another motor to backup claims}
 Due to the tightly integrated actuator design, the motor and cycloid cannot be separated to purely isolate the losses in the cycloid.
 The efficiency map of the motor over its torque and speed range was provided by Parker Motors.
 For calculation purposes, this table is used as a lookup table for efficiency of the motor given the current motor velocity and rms input current.
@@ -102,6 +103,7 @@ The total runtime of the system, not including the initial checkout and verifica
 	\label{eff_results}
 \end{figure*}
 
+\todo[inline]{added a little more on why we didn't liquid cool and such}
 It should be noted that the actuator was used briefly in the robot validation after initial development and construction of the prototype wheel module.
 The total time of use was approximately three hours.
 Afterwards, it was removed from the wheel module and subjected to the characterization that is discussed in this work.
