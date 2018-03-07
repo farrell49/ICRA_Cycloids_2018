@@ -1,0 +1,74 @@
+Reviewer 3 of ICRA 2018 submission 987
+
+Comments to the author
+======================
+
+Paper presents an efficiency study for an integrated
+cycloidal gearbox looking at break-in to steady-state
+performance. This involved a significant amount of fixture
+building, experimentation, and data gathering/processing.
+
+
+Specific Feedback:
+
+Sec II:
+para 2: loss of 88%, should be efficiency of 88%
+
+Eqn 1: It would be informative to include the number of
+lobes and pins for the design under study. We can guess
+from the 59:1 ratio.
+
+Likewise, comparative claims regarding the specific torque
+should be supported with the inclusion of basic overall
+dimensions for the gearbox. To be compared by a reader to
+the specific model of HD drive listed Sec V.
+
+Eqns 2&3, Cx,Cy not defined
+
+Eqns 2-9: not important to the focus of this paper. Nor are
+they used in this study. The gearbox was designed and built
+prior to this paper. 
+
+Sec III:
+Para 2: It is claimed that motor efficiency and IGBT losses
+are included in the calculations.  It would be informative
+to have an example calc or table of several points to show
+the relative magnitudes of these losses
+
+Cycles: 
+Sec III para 3. lists "efficiency cycle" and "long
+term drive cycle". Table I shows "designed duty cycles".
+Table II shows "long run drive cycle". Sec III, last
+sentence has "nominal cycle" (also there: "Fig I" should be
+"Table I"). Sec IV starts with "Duty cycle testing". 
+Defining terms and consistent use is important. It is
+unclear which of these are the same and which is performed
+where.	No definition of the "duty cycle" used in Sec V is
+given
+
+Sec IV:
+para 2: text "(see Fig 5" and "(see Fig 7" missing closing
+parenthesis.
+
+Sec V: 
+It is common for studies of gearbox efficiency to include
+temperature data because of the large effect this has. 
+While no temp sensor was noted, a temperature sensor would
+improve understanding of the data here.
+
+Test Coverage:
+The capability of the test setup allowed only the low-speed
+(<20%), low-torque (<35%) region of the designed
+performance envelope of the gearbox to be characterized.
+
+Fig 8: data plotted against "Percentage of Maximum Torque"
+is not a fair comparison as the non-cycloidal gearbox data
+are scaled to their full design torque while the cycloidal
+gearbox data is scaled to 20% of design torque.
+
+Conclusions for in-use performance -- for the designed task
+from Table I, cannot be made because of the limited
+testing.
+
+Refs:
+Refs 3-10, & 14 are incomplete, no sources cited.

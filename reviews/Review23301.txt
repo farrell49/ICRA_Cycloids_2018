@@ -1,0 +1,134 @@
+Reviewer 2 of ICRA 2018 submission 987
+
+Comments to the author
+======================
+
+The paper is an interesting discussion of some limited
+cycloidal drive tests, but could be improved with more
+details and less "adjective engineering" (e.g., in several
+places the cycloidal drive is described as applicable for
+applications accommodating "small backlash", but no
+substantive definition of "small" is ever given). There are
+numerous instances of this throughout the paper, where
+adjectives (e.g., "small", "higher", "increases", "very")
+are used in circumstances
+where numerical values would be much more illuminating. 
+
+The concept of a cycloidal drive is not well illustrated by
+Figures 1 and 3, which are highly similar, and do not
+convey the internal kinematics of the cycloidal drive. In
+addition, the caption for Figure 3 refers to "ring pins"
+which are not labeled anywhere on either image. Since the
+central thesis of the paper is that cycloidal drives are
+not generally used due to "lack of data that is available
+about their operation", it would be beneficial to devote
+some additional effort towards explaining the fundamentals,
+particularly in terms of the role of the pins in
+transferring torque into the output shaft. 
+
+The paper investigates the point design of a cycloidal
+gearing system for the steering actuator of a large rover.
+While this is perfectly acceptable, the specific
+application requires (relatively) low output shaft rates;
+it would have been nice to address in the paper the
+implications of input and output rotational speeds on the
+applicability of the cycloidal drive. 
+
+Section II presents a very brief overview of the design of
+a cycloidal drive, using equations taken from reference
+documents with little further explanation. It is clear that
+this paper is too short to be useful as a design guide, but
+the relations presented are not used later in the paper,
+either to drive the experimental design or to explain
+experimentally-observed phenomena. Honestly, given paper
+page limits for this conference, this page could be
+replaced by a paragraph referring to more expansive design
+documents without impacting this paper at all. 
+
+The experimental set-up is illustrated by an annotated
+photograph. The description would be much more
+understandable if Figure 4 were replaced with a system
+block diagram of the experimental test apparatus. 
+
+On pg. 4, second paragraph, the experimental analysis
+approach separates out the cycloidal drive efficiency by
+assuming motor efficiency by generic published data on
+motor efficiency vs. speed and input current. Rather than
+settling for "the error in the motor efficiency map is
+assumed to be small," as a frameless motor the efficiency
+is strongly influenced by the design and workmanship of the
+specific installation, and some effort should have been
+made to find a more rigorous method of isolating cycloidal
+drive efficiency. Alternately, it might be more formally
+correct to present the measured efficiency of the complete
+unit rather than making the assumption that the published
+motor efficiency curves are correct for all instantiations
+of this motor. 
+
+It is mentioned that the cycloidal drive was installed in
+the wheel module of the robot and tested for three hours
+prior to being removed for the bench top testing. It would
+be very interesting to get more details on the results of
+this installed testing, and why the module was removed with
+so little run time.  Later in this paragraph there is a
+description of the testing limits, and the fact that
+testing conditions were altered to reflect the lack of
+water cooling for the actuator for which it was designed.
+While it's not surprising that water cooling was not
+available for the unit when it was installed in the field,
+it is surprising that water cooling could not be provided
+for the laboratory testing if that was the design condition
+for the unit. It also calls into question whether the
+experimental results would have been markedly different if
+the unit were run at full rated capacity, and/or if the
+water cooling had been available. The next section, in
+fact, starts with the fact that duty cycle testing had to
+be run at lower forces to prevent actuator overheating. 
+
+In the first line under Section V, the spelling "dependant"
+is used for the noun form. In this sentence, it should be
+"dependent", which is the correct form for the adjective,
+as it is used here. 
+
+Figure 8 shows the derived efficiency of the cycloidal
+drive vs. an assumed equivalent gearing set based on
+harmonic drives and planetary gears. At several points in
+the text the phrase "if backlash is acceptable in the
+system", but no quantitative level of backlash is
+presented. It is quite likely that specific applications
+have specific levels of acceptable backlash, but that data
+is not presented here. Also, while the harmonic drive data
+is referenced to a specific model number, the planetary
+gearing data is only cited as "a representative planetary
+efficiency curve from the engineers at Maxon Motor." No
+further data is presented for this system, even as to the
+number of stages (since it is unlikely that a 59:1 gear
+ratio can be obtained from a single stage of planetary
+gearing). Frankly, the planetary gear data is so much
+better than either the harmonic or cycloidal drives that it
+is unclear why a designer would choose anything else within
+the limits of the discussion in this paper. The data set
+for planetary gearing is so poorly specified that the paper
+would be improved by omitting it, since the discussion is
+solely focused on harmonics vs. cycloidal systems. 
+
+There was some substantial discussion of break-in and
+assertions that the final levels of efficiency are due to
+break-in of the parts, with wear eliminating manufacturing
+defects or other asymmetries in the parts. If so, this
+should have been borne out by inspection of the component
+following a tear-down at the end of the testing; however,
+there is no sign that this was done. Without this sort of
+close examination, the assertion of wear-in as the
+mechanism behind the observed trend is speculative at best.
+
+
+The paper is interesting and the application of the
+cycloidal drive is intriguing, but given that the concept
+has been around for more than 60 years, it is hard to
+believe that this is the only instance of experimental
+verification of cycloidal drive performance. I would
+encourage the authors to do additional literature searches,
+and perhaps include references to prior experimental
+testing of cycloidal drives for completeness of their
+paper. 

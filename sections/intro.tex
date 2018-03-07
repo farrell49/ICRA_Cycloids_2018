@@ -1,21 +1,10 @@
-\todo[inline]{The primary changes are as follows. 
-	\begin{enumerate}
-		\item  Both reviewers commented that the equations were pointless, and a better description of some other things would be better. I agree, and I know a lot more about them now. So, after removing those, I have added in the image from the thesis showing the motion that helps convey how these things work. Additionally, I have added in the picture of the cycloid plate after testing to show the wear and address those questions. 
-		\item I added in a few words in the abstract "lunar or martian" to set it up more explicitly for space.
-		\item I added in a few more words to describe why we didn't test to the extremes on the long runs, specifically that the system was designed for short bursts, so the lower values were used for the long runs to get lifetime. 
-		\item I fixed typos and such that were pointed out. 
-		\item I removed the verbage for the planetary drive in Fig. 9 because it didn't stengthen the argument (pointed out by both reviewers). I don't have the new image on this computer, so I will do that tomorrow. But pretend that the yellow line isn't there. 
-		\item I fixed the references, I noticed these on the Thesis and a reviewer pointed them out that some were missing sources. 
-		\item NOTE: Without the comments, the paper is 1 line over 8 pages (the max) so after your review, if that is still the case, I will remove something from somewhere or I will make a figure smaller to get it back to 8. 
-	\end{enumerate} 
-}
-
 As robotic applications flourish in our modern world, there is an increasing need for high reduction, high torque, and low backlash actuator systems.
 These actuators are present in all types of robotic equipment and are critical in space flight applications.
 A notable recent example includes the Curiosity rover from NASA's Jet Propulsion Laboratory that uses 33 separate motors with various reductions \cite{curiosity}.
 Currently, harmonic drives are the primary reduction method when high ratio and compact design are required.
 Commercially, these reducers come in limited reduction ratio options, and require a substantial amount of additional mass to withstand high torque applications.
-Ideally, one would be able to specify a desired reduction ratio and realize it in a compact, lightweight package.
+Ideally, one would be able to specify a desired reduction ratio and realize it in a compact, lightweight package. 
+Cycloidal drives are potentially an apt replacement for these harmonic drives as they can offer a large reduction in a small package.
 
 \begin{figure*}[t]
 	\centering
@@ -25,25 +14,26 @@ Ideally, one would be able to specify a desired reduction ratio and realize it i
 	\label{cycloid_motion}
 \end{figure*}
 
+
 \subsection{Cycloidal Drive Motivation}
 
-Cycloidal drives are potentially an apt replacement for these harmonic drives as they can offer a large reduction in a small package, with large being defined as requiring three or more stages in a typical planetary drive. 
-In situations where small backlash is acceptable, generally less than 30 arc-minutes, cycloids offer distinct advantages.
+Cycloidal drives cheive reductions that would require three or more stages in a tradiational planeatry drive. 
+In situations where small backlash is acceptable, generally less than 1 arc-min, cycloids offer distinct advantages.
 
 \begin{enumerate}
 \item
-They can be customized into the system directly. They allow specific reductions and load selection and can be incorporated directly into the actuator housing.
+Cycloids can be customized into the system directly. They allow specific reductions and load selection and can be incorporated directly into the actuator housing.
 \item
-They are made of relatively easy to manufacture parts compared to a harmonic drive.
+Cycloids are made of relatively easy to manufacture parts compared to a harmonic drive.
 \item
-The torque to weight ratio typically higher for cycloidal drives of this style over a harmonic drive.
+The torque to weight ratio is typically higher for cycloidal drives of this style over a harmonic drive.
 For example, the cycloid presented in this work is 2.5kg including all housing components, while a comparable harmonic drive is 5.1kg.
 \end{enumerate}
 
-Cycloidal drives have many desirable characteristics. These characteristics are covered well on a theoretical basis in the literature. However, these actuators are commonly used in robotic actuator design, potentially due to the lack of data that is available about their in-use operation.
+Cycloidal drives have many desirable characteristics. These characteristics are covered well on a theoretical basis in the literature. However, these actuators are not commonly used in robotic actuator design, potentially due to the lack of in-use operational data to verify the theoretical analysis.
 
 The primary contribution of this research is to quantify the efficiency of a cycloidal drive system through an extended drive cycle test for burn-in to steady state performance and efficiency over the torque/speed profile.
-To date, the actuator has been subjected to over 51k output revolutions through over 100 hours.
+To date, the actuator has been subjected to over 129k output revolutions through over 300 hours.
 
 \begin{figure}[!b]
    \centering
@@ -55,19 +45,17 @@ To date, the actuator has been subjected to over 51k output revolutions through 
 \end{figure}
 
 
-\todo[inline]{I rephrased the description of the cycloid, and put in the wiki image to make it clearer. I also added the single revolution graphic to make it clearer}
-
 \subsection{Cycloidal Drive Background}
 Cycloidal drives were proposed as early as 1956 by Botsiber and Kingston \cite{1956}.
 The premise of this design leverages a plate, referred to as the cycloid plate, with lobes that interact with pins in the housing being spun on an eccentric shaft with a bearing.
 The interaction between the eccentric rotation and the lobes pressing between the pins induces a counter-clockwise motion of the plate. This counter-clockwise rotation is harnessed via the interior pins that connect to a concentric plate that acts as the output of the mechanism (seen in Fig \ref{cycloid_cartoon}). A graphic of this motion, Fig \ref{cycloid_motion}, shows how the cycloid moves through a single input revolution causing 1/7 of an output revolution through the output pins. 
-The reduction equation \ref{eq:single_stage_ratio} gives the overall reduction of the single-stage cycloid where \textit{N\textsubscript{lobes}} is the number of lobes on the cycloid plate and \textit{N\textsubscript{pins}} is the number of pins in the housing. 
+The reduction equation (\ref{eq:single_stage_ratio}) gives the overall reduction of the single-stage cycloid where \textit{N\textsubscript{lobes}} is the number of lobes on the cycloid plate and \textit{N\textsubscript{pins}} is the number of pins in the housing. 
 
 \begin{equation} \label{eq:single_stage_ratio}
 Q = \frac{N_{lobes}} {N_{pins} - N_{lobes}}
 \end{equation}
 
-This geartrain design has been used in industry for high torque, high shock load applications for many years including companies like Nabtesco Motion Control.
+This geartrain design has been used in industry for high torque, high shock load applications for many years by companies like Nabtesco Motion Control.
 However, in many of these applications, many or all of the interacting surfaces like the housing pins and output pins use needle roller bearings to transmit load.
 This allows for higher efficiency and load carrying capability, but it also increases mass and volume.
 In the robotic industry, groups are striving to reduce the mass and volume of these actuators while still achieving high reduction and load capabilities.
@@ -79,7 +67,7 @@ These works lay a solid foundation for a designer, providing the equations and d
 Still, there is a need to present in-use characteristics to support the theoretical calculations and models which has not been met in the current literature.
 
 Theoretical cycloid efficiencies have been reported in the 88-98\% range \cite{Malhorta}, \cite{unified_approach}.
-More recently, Sinsinger and Lipsey reported experimentally determined efficiencies for fused roller designs (42.3\%) and pin designs (71\%) based on 80 minutes of run-time \cite{cycloid_vs_harmonic}.
+More recently, Sensinger and Lipsey reported experimentally determined efficiencies for fused roller designs (42.3\%) and pin designs (71\%) based on 80 minutes of run-time \cite{cycloid_vs_harmonic}.
 The distinction between a fused roller and pin design comes in the design of the housing.
 In a fused design, the input pins are machined as part of the housing, and in a pin design, pins are inserted to ride in the housing, allowing relative motion.
 
@@ -89,5 +77,5 @@ These two results leave an open trade to designers if stress and torque ripple n
 The aim of this work is to utilize a custom cycloid design for a NASA rover application and show the in-use efficiency characteristics over an extended duration test.
 The actuator design is presented in Section \ref{design}.
 A description of the experimental setup and procedure is provided in Section \ref{methods}.
-Finally, the results and analysis of this high torque actuator and its implications are presented and discussed in Section \ref{results} and Section \ref{discussion}.
+Finally, the results and analysis of this high torque actuator and its implications are presented and discussed in Section \ref{discussion}.
 

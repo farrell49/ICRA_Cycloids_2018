@@ -1,0 +1,50 @@
+Paper is interesting, but the use of a cycloidal drive may
+be more applicable to a different application.	This
+current paper was useful for the physics of mechanical
+speed reducers/torque multiplier family of mechanical
+transmissions.	The data concluded for drive/transmission
+efficiency, planetary gears were found to be the highest,
+with cycloidal drives slightly better than harmonic drives.
+
+However, harmonic drives are the de facto standard for many
+mechanical transmissions due to their zero-backlash and
+compact design.  This is great for manipulators for high
+pointing applications.	The application your paper chose as
+a reference is for torque multiplication for a rover wheel
+drive for outdoor applications, which would not require
+high pointing characteristics.	
+
+It was not the focus of this paper, but wonder if a
+cycloidal drive package would be more compact or lighter or
+having less friction/stiction than a comparable harmonic
+drive package.	Using the same dc motor, it would be
+interesting to compare a cycloidal package with a
+comparable harmonic drive package.  Many harmonic drive
+systems utilize a simpler 100:1 gear ratio as opposed the
+59:1 ration for the tested cycloidal drive, which may make
+computation round-off an issue.  It was stated in this
+paper that overall efficiency of the drive system could not
+be isolated to transmission or motor.  A potential future
+paper might be to understand the physics to discover
+individual efficiency contributions to each component.
+
+There is value in this work, but finding the proper
+application would also strengthen the paper.  For example,
+if this mechanical transmission is better than a harmonic
+drive for say a wheeled application in a potentially  dusty
+environment (lunar application), space (operations in
+cryogenic temperatures or in conjunction with zero gravity
+lubricants), or potentially underwater environment, would
+be a practical contribution to cycloidal drives for robot
+applications (it would be useful to know).  As another
+example, maybe a cycloidal drive has better operational
+properties after sitting in cold for a 14-day, lunar night.
+ The technology might just need to find its niche
+application in this field.  If cycloidal drives have
+non-linearities for control, this transmission may be able
+to overcome other short comings to become an advantage over
+the common harmonic drive with respect to maybe shock, etc.
+
+----------------------------------------
+Comments on Video Attachment:
+
